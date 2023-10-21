@@ -37,7 +37,8 @@ class RectangleTest extends BaseIOTest {
 
     @Test
     void printRectangleFrom8sPrintsWideRectangle() {
-        String expected = "888888\n" +
+        String expected =
+                "888888\n" +
                 "8    8\n" +
                 "8    8\n" +
                 "8    8\n" +
