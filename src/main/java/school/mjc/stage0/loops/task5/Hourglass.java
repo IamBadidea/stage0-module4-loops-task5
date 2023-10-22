@@ -7,40 +7,17 @@ public class Hourglass {
     }
     public void printHourglassOfGivenSize(int height) {
 
-        int from = 0;
-        int to = height -  1;
-        boolean changeDirection = false;
-        boolean twice = height % 2 == 0;
+        int from;
+        int to;
 
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < height; j++) {
-
-                if (j >= from && j <= to) {
+        for (int first = 0, last = height - 1; first < height; first++, last--) {
+            for (int current = 0; current < height; current++) {
+                if (current >= first && current <= last || current >= last && current <= first) {
                     System.out.print("8");
                 } else {
                     System.out.print(" ");
                 }
-
             }
-
-            if ((from == to || (from + 1 > to - 1))) {
-                changeDirection = true;
-            }
-
-            if (from + 1 == to && twice) {
-                twice = false;
-            } else {
-
-                if (changeDirection) {
-                    from--;
-                    to++;
-                } else {
-                    from++;
-                    to--;
-                }
-
-            }
-
             System.out.println();
         }
     }
