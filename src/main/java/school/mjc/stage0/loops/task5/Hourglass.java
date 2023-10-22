@@ -7,9 +7,6 @@ public class Hourglass {
     }
     public void printHourglassOfGivenSize(int height) {
 
-        int from;
-        int to;
-
         for (int first = 0, last = height - 1; first < height; first++, last--) {
             for (int current = 0; current < height; current++) {
                 if (current >= first && current <= last || current >= last && current <= first) {
